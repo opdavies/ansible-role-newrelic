@@ -1,3 +1,6 @@
 ---
 newrelic_packages:
   - newrelic-php5
+__newrelic_ini_path: /etc/php5/cli/conf.d/newrelic.ini
+
+__php_webserver_daemon: "apache2"

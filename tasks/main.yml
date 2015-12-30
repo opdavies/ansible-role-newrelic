@@ -4,3 +4,8 @@
 
 - include: install-Debian.yml
   when: ansible_os_family == 'Debian'
+
+- name: Define newrelic_ini_path.
+  set_fact:
+    newrelic_ini_path: "{{ __newrelic_ini_path }}"
+  when: newrelic_ini_path is not defined
