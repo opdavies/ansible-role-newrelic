@@ -1,2 +1,5 @@
 ---
-# defaults file for opdavies.newrelic
+newrelic_license_key: ''
+newrelic_app_name: 'PHP Application'
+
+newrelic_extra_parameters: ''
