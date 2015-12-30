@@ -1,2 +1,5 @@
 ---
-# handlers file for opdavies.newrelic
+- name: restart webserver
+  service:
+    name: "{{ php_webserver_daemon }}"
+    state: restarted

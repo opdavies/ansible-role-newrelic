@@ -9,3 +9,14 @@
   set_fact:
     newrelic_ini_path: "{{ __newrelic_ini_path }}"
   when: newrelic_ini_path is not defined
+
+- name: Define php_webserver_daemon.
+  set_fact:
+    php_webserver_daemon: "{{ __php_webserver_daemon }}"
+  when: php_webserver_daemon is not defined
+
+- name: Copy newrelic.ini.
+  template:
+    src: newrelic.ini.j2
+    dest: "{{ newrelic_ini_path }}"
+  notify: restart webserver
