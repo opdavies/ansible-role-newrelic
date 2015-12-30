@@ -20,3 +20,9 @@
     src: newrelic.ini.j2
     dest: "{{ newrelic_ini_path }}"
   notify: restart webserver
+
+- name: Enable newrelic to start on boot.
+  service:
+    name: "{{ newrelic_daemon }}"
+    state: started
+    enabled: yes

@@ -1,4 +1,5 @@
 ---
+newrelic_daemon: newrelic-daemon
 newrelic_license_key: ''
 newrelic_app_name: 'PHP Application'
 
